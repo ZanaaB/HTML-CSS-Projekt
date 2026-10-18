@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Together - Të mësojmë së bashku</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a class="kalim-permbajtje" href="#permbajtja">
+        Kalo te aktivitetet
+    </a>
+
+    <header>
+        <div class="logo" aria-hidden="true">💙 🌈 📚</div>
+        <h1>Learning Together</h1>
+        <p class="nen-titulli">Të mësojmë së bashku!</p>
+        <p>Çdo fëmijë mund të mësojë, të luajë dhe të përparojë.</p>
+    </header>
+
+    <nav aria-label="Navigimi kryesor">
+        <a href="#fillimi">Kreu</a>
+        <a href="#aktivitetet">Aktivitetet</a>
+        <a href="#lojera">Lojërat</a>
+    </nav>
+
+    <main id="permbajtja">
+
+        <section class="mireseardhje" id="fillimi">
+            <h2>Mirë se erdhe! 🌟</h2>
+
+            <p>
+                Këtu mësojmë së bashku shkronjat, ngjyrat dhe numrat.
+                Zgjidh aktivitetin që të pëlqen dhe fillo të mësosh!
+            </p>
+
+            <button type="button" onclick="pershendetja()">
+                Përshëndetje 👋
+            </button>
+        </section>
+
+        <section id="aktivitetet">
+            <h2>Aktivitetet tona 📚</h2>
+            <p>Zgjidh një aktivitet për të filluar.</p>
+
+            <div class="aktivitetet">
+
+                <article class="karta">
+                    <div class="ikona" aria-hidden="true">🔤</div>
+                    <h3>Shkronjat</h3>
+                    <p>Njihuni me shkronjat e alfabetit shqip.</p>
+
+                    <button type="button" onclick="shkronjat()">
+                        Mëso shkronjat
+                    </button>
+                </article>
+
+                <article class="karta">
+                    <div class="ikona" aria-hidden="true">🎨</div>
+                    <h3>Ngjyrat</h3>
+                    <p>Mëso të dallosh ngjyrat kryesore.</p>
+
+                    <button type="button" onclick="ngjyrat()">
+                        Mëso ngjyrat
+                    </button>
+                </article>
+
+                <article class="karta">
+                    <div class="ikona" aria-hidden="true">🔢</div>
+                    <h3>Numrat</h3>
+                    <p>Ushtro numërimin nga 1 deri në 5.</p>
+
+                    <button type="button" onclick="numrat()">
+                        Mëso numrat
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="lojera">
+            <h2>Luajmë dhe mësojmë! 🧩</h2>
+            <p>
+                Lexo pyetjen dhe zgjidh përgjigjen.
+                Nëse gabon, mund të provosh përsëri.
+            </p>
+
+            <div class="loja">
+                <h3>🎨 Loja e ngjyrave</h3>
+
+                <p class="pyetja">Cila është ngjyra e gjelbër?</p>
+
+                <div class="alternativat">
+                    <button type="button"
+                        onclick="kontrollo('kuqe')"
+                        aria-label="Zgjidh ngjyrën e kuqe">
+                        🔴 E kuqe
+                    </button>
+
+                    <button type="button"
+                        onclick="kontrollo('gjelber')"
+                        aria-label="Zgjidh ngjyrën e gjelbër">
+                        🟢 E gjelbër
+                    </button>
+
+                    <button type="button"
+                        onclick="kontrollo('kalter')"
+                        aria-label="Zgjidh ngjyrën e kaltër">
+                        🔵 E kaltër
+                    </button>
+                </div>
+
+                <p id="rezultati" class="rezultati"
+                    aria-live="polite" role="status">
+                    Zgjidh përgjigjen tënde!
+                </p>
+            </div>
+
+            <div class="loja">
+                <h3>🔤 Loja e shkronjave</h3>
+
+                <p class="pyetja">Cila është shkronja A?</p>
+
+                <div class="alternativat">
+                    <button type="button"
+                        onclick="kontrolloShkronjen('B')">
+                        B
+                    </button>
+
+                    <button type="button"
+                        onclick="kontrolloShkronjen('A')">
+                        A
+                    </button>
+
+                    <button type="button"
+                        onclick="kontrolloShkronjen('C')">
+                        C
+                    </button>
+                </div>
+
+                <p id="rezultatiShkronjes" class="rezultati"
+                    aria-live="polite" role="status">
+                    Zgjidh shkronjën e saktë!
+                </p>
+            </div>
+
+            <div class="loja">
+                <h3>🔢 Loja e numrave</h3>
+
+                <p class="pyetja">Sa është 2 + 1?</p>
+
+                <div class="alternativat">
+                    <button type="button"
+                        onclick="kontrolloNumrin(2)">
+                        2
+                    </button>
+
+                    <button type="button"
+                        onclick="kontrolloNumrin(3)">
+                        3
+                    </button>
+
+                    <button type="button"
+                        onclick="kontrolloNumrin(4)">
+                        4
+                    </button>
+                </div>
+
+                <p id="rezultatiNumrit" class="rezultati"
+                    aria-live="polite" role="status">
+                    Zgjidh numrin e saktë!
+                </p>
+            </div>
+        </section>
+
+        <section class="mesazhi">
+            <h2>Ti mundesh! 💙</h2>
+            <p>
+                Secili mëson në mënyrën e vet.
+                Provo, mëso dhe festo çdo arritje!
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>💙 Së bashku mësojmë, së bashku përparojmë!</p>
+        <p>Learning Together – Një hap drejt mësimit gjithëpërfshirës.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
